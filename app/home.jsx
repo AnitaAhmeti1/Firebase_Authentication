@@ -1,4 +1,3 @@
-// app/home.jsx
 export const options = { headerShown: false };
 
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
@@ -23,7 +22,7 @@ export default function Home() {
     if (!user) return "";
     if (user.displayName && user.displayName.trim().length > 0) return user.displayName;
     const local = (user.email || "User").split("@")[0];
-    // pak “prettify”: zëvendëso ndarësit me hapësirë dhe kapitalizo fjalët
+    
     return local
       .replace(/[._-]+/g, " ")
       .split(" ")

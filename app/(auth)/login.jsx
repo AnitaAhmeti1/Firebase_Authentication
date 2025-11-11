@@ -1,4 +1,3 @@
-// app/(auth)/login.jsx
 import { useState } from "react";
 import {
   View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform,
@@ -11,7 +10,7 @@ function mapFirebaseError(err) {
   const code = err?.code || "";
   const msg = (err?.message || "").toLowerCase();
 
-  // Google popup-related
+  
   if (code === "auth/popup-closed-by-user") {
     return "You closed the Google login popup. Try again.";
   }
@@ -25,7 +24,7 @@ function mapFirebaseError(err) {
     return "Unauthorized domain. Add your domain in Firebase → Authentication → Authorized domains.";
   }
 
-  // Email/password
+  
   if (code === "auth/invalid-credential" || code === "auth/wrong-password") {
     return "Incorrect email or password.";
   }

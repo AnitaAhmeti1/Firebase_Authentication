@@ -1,4 +1,3 @@
-// app/index.jsx
 import { useEffect, useState } from "react";
 import { Redirect } from "expo-router";
 import { onAuthStateChanged } from "firebase/auth";
@@ -16,7 +15,7 @@ export default function Index() {
     return unsub;
   }, []);
 
-  if (!ready) return null; // shmang navigimin para montimit
+  if (!ready) return null;
 
   return <Redirect href={isLogged ? "/home" : "/(auth)/login"} />;
 }

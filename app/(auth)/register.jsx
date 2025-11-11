@@ -1,4 +1,3 @@
-// app/(auth)/register.jsx
 export const options = { headerShown: false };
 
 import { useState } from "react";
@@ -31,7 +30,7 @@ export default function Register() {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
 
-      // vendos displayName si pjesa para '@'
+      
       const local = (email.split("@")[0] || "User").replace(/[._-]+/g, " ");
       await updateProfile(cred.user, { displayName: local });
 
